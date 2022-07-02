@@ -12,8 +12,8 @@ const App = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
 
-  useEffect((getPosts)=>{
-    dispatch();
+  useEffect(() => {
+    dispatch(getPosts())
   }, [dispatch]);
 
   return (
