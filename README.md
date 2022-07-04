@@ -6,8 +6,8 @@ Stock SnapShot Front Page
 ![Stock SnapShot Front Page](https://raw.githubusercontent.com/Davichavix/SnapShot/main/client/src/images/StockSnapShotScreenshot.png?token=GHSAT0AAAAAABVCF6P6RDT2OZPL6QD6CGS4YWCOEBA)
 
 ### Responsive Design for Mobile
-
-
+Stock SnapShot Mobile Front Page 
+![Stock SnapShot Responsive Design](https://github.com/Davichavix/SnapShot/blob/main/client/src/images/StockSnapShotScreenshot_mobile.png)
 
 ### Main Technologies Used
 * React
@@ -25,5 +25,5 @@ npm install
 
 ```
 
-* To run server npm run server
-* To run client npm run client
+* To run server npm start
+* To run client npm start
