@@ -1,11 +1,11 @@
 import React from "react";
 import { Card, CardActions, CardContent, CardMedia, Button, Typography} from '@material-ui/core'
 import Delete from '@material-ui/icons/Delete';
-import ThumbUpAlt from '@material-ui/icons/ThumbUpAlt';
+import AttachMoney from '@material-ui/icons/AttachMoney';
 import MoreHoriz from '@material-ui/icons/MoreHoriz';
 import moment from 'moment'
 import { useDispatch } from 'react-redux';
-import { deletePost, likePost } from "../../../actions/posts";
+import { deletePost, addSharesPost } from "../../../actions/posts";
 
 import useStyles from './styles';
 
@@ -33,10 +33,10 @@ const Post = ( {post, setCurrentId}) => {
       <Typography variant="body2" color="textSecondary" component="p">{post.message}</Typography>
      </CardContent>
      <CardActions className={classes.cardActions}>
-      <Button size="small" color="primary" onClick={() => {dispatch(likePost(post._id))}}>
-        <ThumbUpAlt fontSize="small" />
-        Like
-        {post.likeCount}
+      <Button size="small" color="primary" onClick={() => {dispatch(addSharesPost(post._id))}}>
+        <AttachMoney fontSize="small" />
+        SHS OWNED + 
+        {post.sharesCount}
       </Button>
       <Button size="small" color="primary" onClick={() => {dispatch(deletePost(post._id))}}>
         <Delete fontSize="small" />
