@@ -3,8 +3,21 @@ Stock Snapshot is a full stack single page application that allows users to keep
 
 
 
-### Technologies used
+### Main Technologies Used
 * React
 * Express
 * Node.js
 * MongoDB
+
+
+### Instruction
+
+* Install packages in both the client and server directory
+
+```
+npm install
+
+```
+
+* To run server npm run server
+* To run client npm run client
