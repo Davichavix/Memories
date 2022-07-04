@@ -1,21 +1,10 @@
 # SnapShot
-Stock Snapshot MERN Application
+Stock Snapshot is a full stack single page application that allows users to keep track of investing ideas and place them on card to reference at a later date. Users are able to upload any image related to the idea and add a their thesis. Cards are easily added and deleted for an optimal user experience
 
 
-1. - Seperate routes into controller file
 
-2. - Export default vs Export Const
-  * Named Exports - can be imported using import { func } from 'module';
-  * can have multiple named exports per file
-
-  * default export - can only have one export per file - can be imported using import MyDefaultComponent from "./MyDefaultExport"; 
-
-3. - import * from file
-
-Import an entire module's contents
-This inserts myModule into the current scope, containing all the exports from the module in the file located in /modules/my-module.js.
-
-```
-import * as api from '../api'
-
-```
+### Technologies used
+* React
+* Express
+* Node.js
+* MongoDB
