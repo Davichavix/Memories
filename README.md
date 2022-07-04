@@ -1,5 +1,5 @@
-# Memories
-Memories MERN Application
+# SnapShot
+Stock Snapshot MERN Application
 
 
 1. - Seperate routes into controller file
