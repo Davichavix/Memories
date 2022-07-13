@@ -1,4 +1,4 @@
-
+import axios from "axios";
 
 export const getCoinData = async (req, res) => {
   try {
@@ -8,6 +8,7 @@ export const getCoinData = async (req, res) => {
     const { data } = await axios.get(URL)
 
     res.status(200).json(data)
+    
   } catch (error) {
     res.status(404).json({ message: error.message})
   }
