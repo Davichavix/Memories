@@ -52,3 +52,12 @@ export const addSharesPost = (id) => async (dispatch) => {
     console.log(error);
   }
 }
+
+export const getCurrentPrice = async (id) => {
+  try {
+    const {data} = await api.getCoinData(id);
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+}
