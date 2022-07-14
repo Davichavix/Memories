@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { TextField, Button, Typography, Paper} from '@material-ui/core'
 import useStyles from './styles';
-import { createPost, updatePost, getCurrentPrice } from '../actions/posts'
-import {useDispatch, useSelector} from 'react-redux'
+import { getCurrentPrice } from '../actions/posts'
 
 const TickerPrice = () => {
   const [tickerName, setTickerName] = useState("");
@@ -10,20 +9,15 @@ const TickerPrice = () => {
 
   const classes = useStyles();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
+    const price = await getCurrentPrice(tickerName);
+    setCurrentPrice(price[0]["current_price"]);
   }
 
   const clear = () => {
     setTickerName("");
   };
-
-  const getCoinPrice = (ticker) => {
-    console.log(ticker)
-    const price = getCurrentPrice(ticker);
-    console.log(price)
-  }
 
   return (
     <Paper className={classes.paper}>

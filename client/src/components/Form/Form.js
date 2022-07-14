@@ -14,8 +14,6 @@ const Form = ({ currentId, setCurrentId }) => {
     selectedFile:''
   })
 
-  const [currentPrice, setCurrentPrice] = useState(0);
-
   const post = useSelector((state) => currentId ? state.posts.find((p) => p._id === currentId) : null);
   const classes = useStyles();
   const dispatch = useDispatch();
