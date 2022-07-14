@@ -25,6 +25,7 @@ export default makeStyles((theme) => ({
   ticker: {
     display: 'flex',
     alignItems: 'center',
+    flexDirection: 'column'
   },
   appBar: {
     borderRadius: 5,
