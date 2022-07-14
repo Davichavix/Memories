@@ -10,13 +10,20 @@ const TickerPrice = () => {
   const classes = useStyles();
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    const price = await getCurrentPrice(tickerName);
-    setCurrentPrice(price[0]["current_price"]);
+    try {
+      e.preventDefault();
+      const price = await getCurrentPrice(tickerName);
+      if (price) {
+        setCurrentPrice(price[0]["current_price"]);
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
   }
 
   const clear = () => {
     setTickerName("");
+    setCurrentPrice(0);
   };
 
   return (
