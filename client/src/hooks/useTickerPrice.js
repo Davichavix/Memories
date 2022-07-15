@@ -22,5 +22,5 @@ export const useTickerPrice = () => {
     setCurrentPrice(0);
   };
 
-  return {clear, handleSubmit};
+  return {currentPrice, tickerName, clear, handleSubmit, setTickerName};
 }

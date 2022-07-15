@@ -2,29 +2,33 @@ import React, { useState, useEffect } from "react";
 import { TextField, Button, Typography, Paper} from '@material-ui/core'
 import useStyles from './styles';
 import { getCurrentPrice } from '../actions/posts'
+import {useTickerPrice} from '../hooks/useTickerPrice'
 
 const TickerPrice = () => {
-  const [tickerName, setTickerName] = useState("");
-  const [currentPrice, setCurrentPrice] = useState(0);
+
+  const {currentPrice, tickerName, clear, handleSubmit, setTickerName} = useTickerPrice()
+
+  // const [tickerName, setTickerName] = useState("");
+  // const [currentPrice, setCurrentPrice] = useState(0);
 
   const classes = useStyles();
 
-  const handleSubmit = async (e) => {
-    try {
-      e.preventDefault();
-      const price = await getCurrentPrice(tickerName);
-      if (price) {
-        setCurrentPrice(price[0]["current_price"]);
-      }
-    } catch (error) {
-      console.log(error.message);
-    }
-  }
+  // const handleSubmit = async (e) => {
+  //   try {
+  //     e.preventDefault();
+  //     const price = await getCurrentPrice(tickerName);
+  //     if (price) {
+  //       setCurrentPrice(price[0]["current_price"]);
+  //     }
+  //   } catch (error) {
+  //     console.log(error.message);
+  //   }
+  // }
 
-  const clear = () => {
-    setTickerName("");
-    setCurrentPrice(0);
-  };
+  // const clear = () => {
+  //   setTickerName("");
+  //   setCurrentPrice(0);
+  // };
 
   return (
     <Paper className={classes.paper}>
