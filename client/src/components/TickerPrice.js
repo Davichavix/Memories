@@ -8,27 +8,7 @@ const TickerPrice = () => {
 
   const {currentPrice, tickerName, clear, handleSubmit, setTickerName} = useTickerPrice()
 
-  // const [tickerName, setTickerName] = useState("");
-  // const [currentPrice, setCurrentPrice] = useState(0);
-
   const classes = useStyles();
-
-  // const handleSubmit = async (e) => {
-  //   try {
-  //     e.preventDefault();
-  //     const price = await getCurrentPrice(tickerName);
-  //     if (price) {
-  //       setCurrentPrice(price[0]["current_price"]);
-  //     }
-  //   } catch (error) {
-  //     console.log(error.message);
-  //   }
-  // }
-
-  // const clear = () => {
-  //   setTickerName("");
-  //   setCurrentPrice(0);
-  // };
 
   return (
     <Paper className={classes.paper}>
