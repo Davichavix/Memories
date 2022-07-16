@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { getCurrentPrice } from '../actions/posts'
 
 export const useTickerPrice = () => {

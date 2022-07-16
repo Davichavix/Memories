@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
 
 const postSchema =mongoose.Schema({
-  title: String,
-  message: String,
-  creator: String,
+  company: String,
+  thesis: String,
+  ticker: String,
   tags: [String],
   selectedFile: String,
   sharesCount: {
