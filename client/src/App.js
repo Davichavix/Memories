@@ -7,7 +7,7 @@ import Posts from './components/Posts/Posts';
 import Form from './components/Form/Form';
 import stockLogo from './images/stockLogo.png';
 import useStyles from './styles'
-import TickerPrice from './components/TickerPrice';
+import TickerPrice from './components/TickerPrice/TickerPrice';
 
 const App = () => {
   const [currentId, setCurrentId] = useState(null);

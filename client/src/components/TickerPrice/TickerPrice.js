@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { TextField, Button, Typography, Paper} from '@material-ui/core'
 import useStyles from './styles';
-import { getCurrentPrice } from '../actions/posts'
-import {useTickerPrice} from '../hooks/useTickerPrice'
+import { getCurrentPrice } from '../../actions/posts'
+import {useTickerPrice} from '../../hooks/useTickerPrice'
 
 const TickerPrice = () => {
 

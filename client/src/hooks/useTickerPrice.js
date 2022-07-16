@@ -2,8 +2,11 @@ import React, { useState, useEffect } from "react";
 import { getCurrentPrice } from '../actions/posts'
 
 export const useTickerPrice = () => {
-  const [tickerName, setTickerName] = useState("");
-  const [currentPrice, setCurrentPrice] = useState(0);
+  const blankName = "";
+  const zeroPrice = 0;
+
+  const [tickerName, setTickerName] = useState(blankName);
+  const [currentPrice, setCurrentPrice] = useState(zeroPrice);
 
   const handleSubmit = async (e) => {
     try {
@@ -22,5 +25,5 @@ export const useTickerPrice = () => {
     setCurrentPrice(0);
   };
 
-  return {currentPrice, tickerName, clear, handleSubmit, setTickerName};
+  return {currentPrice, setCurrentPrice, tickerName, setTickerName, clear, handleSubmit, blankName, zeroPrice};
 }
