@@ -1,5 +1,3 @@
-export const verifyPostDataNotEmpty = (postData) => {
-    if (postData["Ticker"]) {
-      
-    }
+export const convertStringInput = (input) => {
+    return input.toLowerCase().trim();
 }
