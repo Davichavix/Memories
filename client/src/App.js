@@ -7,6 +7,7 @@ import Posts from './components/Posts/Posts';
 import Form from './components/Form/Form';
 import stockLogo from './images/stockLogo.png';
 import useStyles from './styles'
+import TickerPrice from './components/TickerPrice';
 
 const App = () => {
   const [currentId, setCurrentId] = useState(null);
@@ -30,6 +31,7 @@ const App = () => {
               <Posts setCurrentId={setCurrentId}/>
             </Grid>
             <Grid item xs={12} sm={4}>
+              <TickerPrice />
               <Form currentId={currentId} setCurrentId={setCurrentId}/>
             </Grid>
           </Grid>
