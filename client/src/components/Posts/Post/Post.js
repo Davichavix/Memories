@@ -8,11 +8,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { deletePost, addSharesPost } from "../../../actions/posts";
 
 import useStyles from './styles';
+import { updatePost } from "../../../api";
 
 const Post = ( {post, setCurrentId}) => {
   const classes = useStyles();
   const dispatch = useDispatch();
-
+ console.log(post.company, "Gary")
   return (
    <Card className={classes.card}>
      <CardMedia className={classes.media} image={post.selectedFile} title={post.company}/>
