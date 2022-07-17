@@ -1,9 +1,11 @@
 import axios from "axios";
+import dotenv from 'dotenv';
 
 export const getCoinData = async (req, res) => {
+  const apiKey = process.env.API_KEY
   try {
     const id = req.params.id;
-    const URL = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${id}&order=market_cap_desc&per_page=1&page=1&sparkline=false&price_change_percentage=24h`;
+    const URL = `https://api.polygon.io/v2/aggs/ticker/${id}/prev?adjusted=true&apiKey=${apiKey}`;
 
     const { data } = await axios.get(URL)
 
