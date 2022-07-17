@@ -13,13 +13,12 @@ import { updatePost } from "../../../api";
 const Post = ( {post, setCurrentId}) => {
   const classes = useStyles();
   const dispatch = useDispatch();
- console.log(post.company, "Gary")
   return (
    <Card className={classes.card}>
      <CardMedia className={classes.media} image={post.selectedFile} title={post.company}/>
      <div className={classes.overlay}>
         <Typography variant="h6">{post.ticker}</Typography>
-        <Typography variant="body2">{moment(post.createdAt).fromNow()}</Typography>
+        <Typography variant="body2">{moment(post.createdAt).format('YYYY-MM-DD')}</Typography>
      </div>
      <div className={classes.overlay2}>
       <Button style={{color: 'white'}} size="small" onClick={() => setCurrentId(post._id)}>
