@@ -13,11 +13,11 @@ describe('convertStringInput', () => {
     expect(typeof output).toBe('string');
   })
 
-  it('input string should be strictly equal to lowercase output string', () => {
-    const upperStringInput = "HELLO WORLD";
+  it('input string should be strictly equal to uppercase output string', () => {
     const lowerString = "hello world";
-    const output = convertStringInput(upperStringInput);
-    expect(lowerString).toEqual(output);
+    const upperStringInput = "HELLO WORLD";
+    const output = convertStringInput(lowerString);
+    expect(upperStringInput).toEqual(output);
   })
 
   it('output string should have no whitespace on either end of string', () => {

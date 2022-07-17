@@ -12,10 +12,13 @@ export const useTickerPrice = () => {
     try {
       e.preventDefault();
       const price = await getCurrentPrice(tickerName);
-      if (price) {
-        setCurrentPrice(price[0]["current_price"]);
+      if (typeof price["results"][0]["c"] === "number") {
+        setCurrentPrice(price["results"][0]["c"]);
+      } else {
+        setCurrentPrice("Invalid Ticker")
       }
     } catch (error) {
+      setCurrentPrice("Invalid Ticker")
       console.log(error.message);
     }
   }

@@ -1,3 +1,3 @@
 export const convertStringInput = (input) => {
-    return input.toLowerCase().trim();
+    return input.toUpperCase().trim();
 }
