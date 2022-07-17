@@ -33,11 +33,11 @@ const Post = ( {post, setCurrentId}) => {
       <Typography variant="body2" color="textSecondary" component="p">{post.thesis}</Typography>
      </CardContent>
      <CardActions className={classes.cardActions}>
-      <Button size="small" color="primary" onClick={() => {dispatch(addSharesPost(post._id))}}>
+      {/* Add position size functionality <Button size="small" color="primary" onClick={() => {dispatch(addSharesPost(post._id))}}>
         <AttachMoney fontSize="small" />
         SHS OWNED + 
         {post.sharesCount}
-      </Button>
+      </Button> */}
       <Button size="small" color="primary" onClick={() => {dispatch(deletePost(post._id))}}>
         <Delete fontSize="small" />
         Delete

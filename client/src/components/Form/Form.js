@@ -26,16 +26,13 @@ const Form = ({ currentId, setCurrentId }) => {
     e.preventDefault();
     
     if(currentId) {
-      dispatch(updatePost(currentId, postData));
-      clear();
+      dispatch(updatePost(currentId, postData)).then(clear());
     } else {
-      dispatch(createPost(postData));
-      clear();
+      dispatch(createPost(postData)).then(clear());
     }
   }
 
   const clear = () => {
-    setCurrentId(null);
     setPostData({
       ticker: '',
       company: '',
@@ -43,6 +40,7 @@ const Form = ({ currentId, setCurrentId }) => {
       tags: '',
       selectedFile:''
     })
+    setCurrentId(null);
   };
 
   return (
