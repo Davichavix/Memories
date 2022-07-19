@@ -21,8 +21,8 @@ describe('convertStringInput', () => {
   })
 
   it('output string should have no whitespace on either end of string', () => {
-    const upperStringInput = "    hello world    ";
-    const output = convertStringInput(upperStringInput);
+    const blankSpaceString = "    hello world    ";
+    const output = convertStringInput(blankSpaceString);
     expect(output[0]).not.toEqual(" ");
     expect(output[output.length - 1]).not.toEqual(" ");
   })

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { getCurrentPrice } from '../actions/posts'
 
 export const useTickerPrice = () => {
@@ -28,5 +28,5 @@ export const useTickerPrice = () => {
     setCurrentPrice(0);
   };
 
-  return {currentPrice, setCurrentPrice, tickerName, setTickerName, clear, handleSubmit, blankName, zeroPrice};
+  return {currentPrice, setCurrentPrice, tickerName, setTickerName, clear, handleSubmit, blankName, zeroPrice, handleSubmit};
 }
