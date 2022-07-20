@@ -1,14 +1,11 @@
-import React, { useEffect } from "react";
 import { Card, CardActions, CardContent, CardMedia, Button, Typography} from '@material-ui/core'
 import Delete from '@material-ui/icons/Delete';
-import AttachMoney from '@material-ui/icons/AttachMoney';
 import MoreHoriz from '@material-ui/icons/MoreHoriz';
 import moment from 'moment'
-import { useDispatch, useSelector } from 'react-redux';
-import { deletePost, addSharesPost } from "../../../actions/posts";
+import { useDispatch } from 'react-redux';
+import { deletePost } from "../../../actions/posts";
 
 import useStyles from './styles';
-import { updatePost } from "../../../api";
 
 const Post = ( {post, setCurrentId}) => {
   const classes = useStyles();

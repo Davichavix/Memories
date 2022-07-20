@@ -45,6 +45,11 @@ describe('useTickerPriceHook', () => {
 
     act(() => {
       result.current.setCurrentPrice(updatedPrice);
+    })
+
+    expect(result.current.currentPrice).toStrictEqual(updatedPrice);
+
+    act(() => {
       result.current.clear();
     })
 

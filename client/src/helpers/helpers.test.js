@@ -14,8 +14,8 @@ describe('convertStringInput', () => {
   })
 
   it('input string should be strictly equal to uppercase output string', () => {
-    const lowerString = "hello world";
-    const upperStringInput = "HELLO WORLD";
+    const lowerString = "hello world!";
+    const upperStringInput = "HELLO WORLD!";
     const output = convertStringInput(lowerString);
     expect(upperStringInput).toEqual(output);
   })
