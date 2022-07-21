@@ -3,7 +3,7 @@ Stock Snapshot is a full stack single page application that allow users to keep 
 
 ### Front Page
 Stock SnapShot Front Page
-![Stock SnapShot Front Page](https://raw.githubusercontent.com/Davichavix/SnapShot/main/client/src/images/StockSnapShotScreenshot.png?token=GHSAT0AAAAAABVCF6P6RDT2OZPL6QD6CGS4YWCOEBA)
+![Stock SnapShot Front Page](https://raw.githubusercontent.com/Davichavix/StockSnapShot/main/client/src/images/StockSnapShot_Screenshot.png)
 
 ### Responsive Design for Mobile
 Stock SnapShot Mobile Front Page 
