@@ -2,7 +2,7 @@ import React from "react";
 import {render, cleanup, act, fireEvent, userEvent } from "@testing-library/react";
 import TickerPrice from './TickerPrice'
 
-afterEach(cleanup);
+// afterEach(cleanup);
 
 describe("TickerPrice", () => {
   it("renders without crashing", () => {
